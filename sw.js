@@ -1,15 +1,17 @@
-const CACHE_NAME = "tosun-pwa-v1";
+const CACHE_NAME = "tosun-pwa-v2";
 const ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./db.js",
+  "./auth.js",
   "./manifest.json",
   "./icon-192.png",
   "./icon-512.png",
   "./apple-touch-icon.png",
   "./favicon-64.png",
+  "./logo.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -27,12 +29,13 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  const req = event.request;
   event.respondWith(
-    caches.match(req).then((cached) => cached || fetch(req).then((res) => {
-      const copy = res.clone();
-      caches.open(CACHE_NAME).then(cache => cache.put(req, copy)).catch(()=>{});
-      return res;
-    }).catch(() => cached))
+    caches.match(event.request).then((cached) =>
+      cached || fetch(event.request).then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy)).catch(()=>{});
+        return res;
+      }).catch(() => cached)
+    )
   );
 });

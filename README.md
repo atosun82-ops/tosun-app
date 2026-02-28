@@ -1,17 +1,14 @@
-# Tosun Bau – Anwesenheit & Zahlungen (PWA, lokal)
+# Tosun Bau – Anwesenheit & Zahlungen (PWA Premium)
 
-## Installation auf iPhone/iPad (ohne App Store)
-1) Lade diesen Ordner auf **einen HTTPS-Webspace** (z.B. deine Website).
-2) Öffne die URL in **Safari**.
-3) Teilen → **Zum Home-Bildschirm**.
+Neu:
+- Mehr Platz für Beträge pro Tag (iPhone/iPad)
+- Edleres Premium-Design
+- Jahresübersicht mit **Gesamtsumme**
+- Optional: App-Sperre via **Face ID / Touch ID** (WebAuthn/Passkey) über 🔒 Button (wenn iOS Safari unterstützt)
 
-Die Daten werden **lokal auf dem Gerät** gespeichert (IndexedDB).
+## Update auf GitHub Pages
+In deinem Repo einfach diese Dateien **ersetzen** (hochladen, committen).
+Danach Seite neu laden.
 
-## Testen am PC
-Im Projektordner:
-```bash
-python -m http.server 8000
-```
-Dann im Browser öffnen: http://localhost:8000
-
-> Offline-Modus (Service Worker) funktioniert auf iPhone/iPad zuverlässig nur über HTTPS.
+## Als App installieren
+Safari → Teilen → Zum Home-Bildschirm

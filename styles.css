@@ -1,0 +1,28 @@
+:root{--bg:#0f0f10;--card:#17181b;--muted:#a8a8aa;--text:#f4f4f5;--line:#2a2b30;--accent:#ff6a00;--ok:#3ddc84;--warn:#ffb020;--bad:#ff4d4d;}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);}
+.header{padding:14px 16px 10px;position:sticky;top:0;background:linear-gradient(180deg, rgba(15,15,16,0.98), rgba(15,15,16,0.88));backdrop-filter: blur(10px);border-bottom:1px solid var(--line);z-index:10;}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.title{font-size:22px;font-weight:700;line-height:1.15;}
+.subtitle{color:var(--muted);font-size:13px;margin-top:4px;}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px 12px;border-radius:12px;font-weight:600;cursor:pointer;}
+.btn.primary{border-color:rgba(255,106,0,0.35);background:rgba(255,106,0,0.12);}
+.container{padding:14px 16px 90px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-bottom:12px;}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.name{font-size:18px;font-weight:700;}
+.small{color:var(--muted);font-size:13px;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.chip{border:1px solid var(--line);background:rgba(255,255,255,0.02);padding:7px 9px;border-radius:999px;font-size:12px;color:var(--text);}
+.chip.bad{border-color:rgba(255,77,77,0.35);background:rgba(255,77,77,0.10);}
+.chip.ok{border-color:rgba(61,220,132,0.35);background:rgba(61,220,132,0.10);}
+.navbar{position:fixed;left:0;right:0;bottom:0;padding:10px 16px;background:rgba(15,15,16,0.92);border-top:1px solid var(--line);backdrop-filter: blur(10px);display:flex;justify-content:space-between;gap:12px;}
+.input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#101114;color:var(--text);font-size:16px;}
+.list{display:flex;flex-direction:column;gap:10px;}
+.day{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;}
+.dayleft{display:flex;flex-direction:column;gap:4px;}
+.toggle{display:flex;align-items:center;gap:10px;}
+.toggle input{width:22px;height:22px;}
+.money{width:120px;text-align:right;}
+.grid12{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.monthbtn{padding:12px 10px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--text);font-weight:700;text-align:center;cursor:pointer;}
